@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
 const passport=require('passport');
-
+const pdf = require('../controller/pdf');
 const studentController=require('../controller/students');
 
 router.get('/login',studentController.login);
@@ -39,4 +39,5 @@ router.post('/resetPassword', studentController.resetPasswordRequest);
 router.get('/setNewPassword', studentController.renderNewPasswordRequest);
 router.post('/setNewPassword', studentController.setNewPasswordRequest);
 
+router.post('/pdf', pdf.pdfController);
 module.exports=router;

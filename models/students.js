@@ -11,6 +11,9 @@ const resultSchema=new Schema({
     testCode:{
         type:String
     },
+    teacher:{
+        type : String
+    },
     result:{
         totalQuestions:{
             type: Number,
@@ -21,6 +24,10 @@ const resultSchema=new Schema({
         },
         remark:{
             type: String
+        },
+        pdf:{
+            type: String,
+            default : null
         }
     }
 })
